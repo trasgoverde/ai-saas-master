@@ -4,6 +4,7 @@ export default function Loading() {
   return (
     <div>
       <p className="text-3xl">Sign In</p>
+      <div className="loader"></div> {/* Add the spinner here */}
       <ul className="list-disc pl-6 mt-4 space-y-2">
         {[...Array(20).keys()].map((i) => (
           <li key={i}>
@@ -20,3 +21,6 @@ export default function Loading() {
     </div>
   );
 }
+
+
+
