@@ -5,7 +5,7 @@ import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Download, ImageIcon } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
@@ -61,9 +61,9 @@ const PhotoPage = () => {
   return ( 
     <div>
       <Heading
-        title="Image Generation"
-        description="Turn your prompt into an image."
-        icon={ImageIcon}
+        title="Email Generation"
+        description="Write high-converting emails in minutes or Awnser any received Email"
+        icon={Mail}
         iconColor="text-pink-700"
         bgColor="bg-pink-700/10"
       />

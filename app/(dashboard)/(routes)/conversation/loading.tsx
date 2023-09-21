@@ -3,7 +3,7 @@ import React from 'react';
 export default function Loading() {
   return (
     <div>
-      <p className="text-3xl">Conversation</p>
+      <p className="text-3xl">Pdf Chat</p>
       <ul className="list-disc pl-6 mt-4 space-y-2">
         {[...Array(20).keys()].map((i) => (
           <li key={i}>

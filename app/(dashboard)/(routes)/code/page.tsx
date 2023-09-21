@@ -2,7 +2,7 @@
 
 import * as z from "zod";
 import axios from "axios";
-import { Code } from "lucide-react";
+import { Webhook } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
@@ -61,9 +61,9 @@ const CodePage = () => {
   return ( 
     <div>
       <Heading
-        title="Code Generation"
-        description="Generate code using descriptive text."
-        icon={Code}
+        title="SEO & Content Generation"
+        description="Generate SEO Keywords & Content using descriptive text of your product or service and niche."
+        icon={Webhook}
         iconColor="text-green-700"
         bgColor="bg-green-700/10"
       />
