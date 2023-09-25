@@ -56,8 +56,8 @@ const MusicPage = () => {
   return ( 
     <div>
       <Heading
-        title="Music Generation"
-        description="Turn your prompt into music."
+        title="Block Content Generation"
+        description="Turn your prompt into a Blog Post."
         icon={Music}
         iconColor="text-emerald-500"
         bgColor="bg-emerald-500/10"

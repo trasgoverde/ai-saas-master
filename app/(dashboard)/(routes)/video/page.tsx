@@ -17,6 +17,7 @@ import { Loader } from "@/components/loader";
 import { Empty } from "@/components/ui/empty";
 import { useProModal } from "@/hooks/use-pro-modal";
 
+
 import { formSchema } from "./constants";
 
 const VideoPage = () => {
@@ -55,7 +56,7 @@ const VideoPage = () => {
   return ( 
     <div>
       <Heading
-        title="Video Generation"
+        title="Linkedin Post Generation"
         description="Turn your prompt into video."
         icon={FileAudio}
         iconColor="text-orange-700"
@@ -78,21 +79,7 @@ const VideoPage = () => {
               gap-2
             "
           >
-            <FormField
-              name="prompt"
-              render={({ field }) => (
-                <FormItem className="col-span-12 lg:col-span-10">
-                  <FormControl className="m-0 p-0">
-                    <Input
-                      className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
-                      disabled={isLoading} 
-                      placeholder="Clown fish swimming in a coral reef" 
-                      {...field}
-                    />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
+
             <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
               Generate
             </Button>
@@ -104,7 +91,7 @@ const VideoPage = () => {
           </div>
         )}
         {!video && !isLoading && (
-          <Empty label="No video files generated." />
+          <Empty label="No Linkedin Post generated." />
         )}
         {video && (
           <video controls className="w-full aspect-video mt-8 rounded-lg border bg-black">

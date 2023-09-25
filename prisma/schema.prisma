@@ -24,3 +24,19 @@ model UserSubscription {
   stripePriceId          String?   @map(name: "stripe_price_id")
   stripeCurrentPeriodEnd DateTime? @map(name: "stripe_current_period_end")
 }
+
+model Chats {
+  id        String      @id @default(cuid())
+  userId        String      @unique
+  pdfName:  String?
+  pdfUrl: String
+  createdAt: DateTime @default(now())
+  fileKey: String? @unique
+}
+
+model Messages  {
+  id        String      @id @default(cuid())
+  chatId: integer? 
+  content: String?
+  createdAt: DateTime @default(now())
+}
