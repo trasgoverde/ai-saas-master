@@ -20,9 +20,7 @@ import { Loader } from "@/components/loader";
 import { UserAvatar } from "@/components/user-avatar";
 import { Empty } from "@/components/ui/empty";
 import { useProModal } from "@/hooks/use-pro-modal";
-import { BubbleChat } from 'flowise-embed-react'
-
-import { FileUpload } from "@/components/fileupload";
+import { fileUpload } from "@/components/fileupload";
 
 import { formSchema } from "./constants";
 
@@ -61,10 +59,7 @@ const ConversationPage = () => {
   }
   const App = () => {
     return (
-      <FileUpload
-  />
-
-  
+      <FileUpload />  
 );
   
 };
