@@ -28,15 +28,15 @@ model UserSubscription {
 model Chats {
   id        String      @id @default(cuid())
   userId        String      @unique
-  pdfName:  String?
-  pdfUrl: String
-  createdAt: DateTime @default(now())
-  fileKey: String? @unique
+  pdfName  String?
+  pdfUrl String
+  createdAt DateTime @default(now())
+  fileKey String? @unique
 }
 
 model Messages  {
   id        String      @id @default(cuid())
-  chatId: integer? 
-  content: String?
-  createdAt: DateTime @default(now())
+  chatId Int? 
+  content String?
+  createdAt DateTime @default(now())
 }
