@@ -1,8 +1,12 @@
-"use client"
+"use client";
 
+import { useMutation } from "@tanstack/react-query";
+import { Inbox, Loader2 } from "lucide-react";
 import React from "react";
 import { useDropzone } from "react-dropzone";
-import { Inbox, Loader2 } from "lucide-react";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import { useRouter } from "next/navigation";
 import { uploadToS3 } from "@/lib/s3";
 
 const FileUpload = () => {
