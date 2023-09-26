@@ -100,7 +100,7 @@ const ConversationPage = () => {
                 )}
               />
 
-              <FileUpload /> {/* Add the FileUpload component here */}
+              <FileUpload className="border-dashed border-2 rounded-xl cursor-pointer bg-gray-50 py-8 flex justify-center items-center flex-col" /> {/* Add the FileUpload component here */}
 
               <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
                 Generate
