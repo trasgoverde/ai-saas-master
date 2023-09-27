@@ -10,6 +10,23 @@ import { useRouter } from "next/navigation";
 import { uploadToS3 } from "@/lib/s3";
 
 const FileUpload = () => {
+    const [uploading, setUploading] = React.useState(false);
+  const { mutate, isLoading } = useMutation({
+    mutationFn: async ({
+      file_key,
+      file_name,
+    }: {
+      file_key: string;
+      file_name: string;
+    }) => {
+      const response = await axios.post("/api/create-chat", {
+        file_key,
+        file_name,
+      });
+      return response.data;
+    },
+  });
+    
     const { getRootProps, getInputProps} = useDropzone({
         accept: { "application/pdf": [".pdf"]},
         maxFiles: 1,
@@ -18,19 +35,36 @@ const FileUpload = () => {
             const file = acceptedFiles[0]
             if (file.size > 10 * 1024 * 1024){
                 //Bigger than 10mb!!
-                alert('Please, Upload a Smaller File')
-                return
+                toast.error("File Too Large!");
+                return;
             }
 
             try {
+                setUploading(true);
                 const data = await uploadToS3(file);
-                console.log("data", data);
-                } catch (error) {
-                    console.log(error);
-            }
-        },
-    });
-    return (
+                console.log("meow", data);
+                if (!data?.file_key || !data.file_name) {
+                  toast.error("Something went wrong");
+                  return;
+                }
+                mutate(data, {
+                  onSuccess: ({ chat_id }) => {
+                    toast.success("Chat created!");
+                    //router.push(`/conversation/${chat_id}`);
+                  },
+                  onError: (err) => {
+                    toast.error("Error creating chat");
+                    console.error(err);
+                  },
+                });
+              } catch (error) {
+                console.log(error);
+              } finally {
+                setUploading(false);
+              }
+            },
+          });
+          return (
         <div className="col-span-12 lg:col-span-10 p-2 bg-gray flex-center rounded-x1">
             <div 
             {...getRootProps({
