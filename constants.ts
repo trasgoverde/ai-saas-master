@@ -5,6 +5,13 @@ export const MAX_FREE_COUNTS = 5;
 
 export const tools = [
   {
+    label: 'Pdf',
+    icon: MessageSquare,
+    href: '/chat',
+    color: "text-violet-500",
+    bgColor: "bg-violet-500/10",
+  },
+  {
     label: 'Pdf Chat',
     icon: MessageSquare,
     href: '/conversation',

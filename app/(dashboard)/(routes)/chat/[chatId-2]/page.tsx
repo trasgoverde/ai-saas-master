@@ -22,10 +22,10 @@ const ChatPage = async ({ params: { chatId } }: Props) => {
   }
   const _chats = await db.select().from(chats).where(eq(chats.userId, userId));
   if (!_chats) {
-    return redirect("/");
+    return redirect("/conversation${chat.id}");
   }
   if (!_chats.find((chat) => chat.id === parseInt(chatId))) {
-    return redirect("/");
+    return redirect("/conversation/${chat.id}");
   }
 
   const currentChat = _chats.find((chat) => chat.id === parseInt(chatId));

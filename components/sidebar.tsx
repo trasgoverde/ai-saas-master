@@ -19,6 +19,12 @@ const routes = [
     color: "text-sky-500"
   },
   {
+    label: 'Pdf',
+    icon: MessageSquare,
+    href: '/chat',
+    color: "text-violet-500",
+  },
+  {
     label: 'Pdf Chat',
     icon: MessageSquare,
     href: '/conversation',
