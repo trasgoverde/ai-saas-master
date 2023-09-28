@@ -32,6 +32,7 @@
     "@types/react-dom": "18.2.6",
     "ai": "^2.2.13",
     "autoprefixer": "10.4.14",
+    "aws-crt": "^1.18.0",
     "aws-sdk": "^2.1464.0",
     "axios": "^1.4.0",
     "class-variance-authority": "^0.6.1",
