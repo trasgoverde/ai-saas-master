@@ -3679,7 +3679,7 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.npmjs.org/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-aws-crt@^1.18.0, aws-crt@>=1.0.0:
+aws-crt@>=1.0.0:
   version "1.18.0"
   resolved "https://registry.npmjs.org/aws-crt/-/aws-crt-1.18.0.tgz"
   integrity sha512-H5Vrb/GMzq72+Of2zrW69i/BTQ4gQd3MQvdZ3X3okfppzHdEjSPkdJN6ia8V2/1J1FmFvEtoxaY4nwraHUGQvg==
