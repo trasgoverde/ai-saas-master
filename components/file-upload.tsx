@@ -43,7 +43,7 @@ const FileUpload = () => {
       try {
         setUploading(true);
         const data = await uploadToS3(file);
-        console.log("meow", data);
+        console.log("Pdf Uploaded", data);
         if (!data?.file_key || !data.file_name) {
           toast.error("Something went wrong");
           return;
@@ -79,7 +79,7 @@ const FileUpload = () => {
             {/* loading state */}
             <Loader2 className="h-10 w-10 text-blue-500 animate-spin" />
             <p className="mt-2 text-sm text-slate-400">
-              Spilling Tea to GPT...
+              Feeding AI Brain...
             </p>
           </>
         ) : (

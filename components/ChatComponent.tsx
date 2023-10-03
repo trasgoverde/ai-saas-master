@@ -64,7 +64,7 @@ const ChatComponent = ({ chatId }: Props) => {
           />
           <Button className="bg-blue-600 ml-2">
             <Send className="h-4 w-4" />
-          </Button>
+          </ Button>
         </div>
       </form>
     </div>
